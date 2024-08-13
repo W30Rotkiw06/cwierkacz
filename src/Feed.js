@@ -15,16 +15,23 @@ class Feed extends Component{
     componentDidMount = async()=>{
         this.updateFeed()
 
-        this.props.supabase.channel(this.props.email).on('postgres_changes', { event: '*', schema: 'public', table: 'posts' }, payload => {
+        this.props.supabase.channel(this.props.username).on('postgres_changes', { event: '*', schema: 'public', table: 'posts' }, payload => {
             console.log('Change received!', payload)
             this.updateFeed()
             }).subscribe()
     }
+    componentWillUnmount = async ()=>{
+        this.props.supabase.removeAllChannels()
+    }
+
 
     updateFeed = async()=>{
         let {data, error} = await this.props.supabase.from("posts").select().order('id', { ascending: false })
         if(error){console.error(error)}
-        this.setState({posts: data})
+        else{
+            this.setState({posts: data})
+        }
+        
     }
 
     handlePostTextChange = event =>{

@@ -18,14 +18,14 @@
 }
 
 .hello-screen{
-  width: 400px;
+  width: 300px;
   border: 1px solid white;
   border-radius: 20px;
   position: relative;
 }
 
 .welcome{
-  font-size: 26px;
+  font-size: 24px;
 }
 
 .elon-dont-sue-me{
@@ -47,7 +47,7 @@
 }
 
 .save-button{
-  width: 200px;
+  width: 150px;
   height: 29px;
   text-align: center;
   background-color: #fff;
@@ -58,7 +58,7 @@
   margin-bottom: 20px;
   position: absolute;
   bottom: 5px;
-  left: 100px
+  left: 75px
 }
 
 .save-button:disabled{
@@ -86,7 +86,7 @@
 
 
 .post{
-  width: 400px;
+  width: 320px;
   border: 1px solid white;
   border-radius: 20px;
   margin: 20px;
@@ -94,7 +94,7 @@
 }
 
 .post-author{
-  font-size: 28px;
+  font-size: 24px;
   text-align: left;
   position: relative;
   left: 20px;
@@ -103,7 +103,7 @@
 
 .post-text-input{
   text-align: left;
-  width: 360px;
+  width: 280px;
 }
 
 .post-text{
@@ -127,6 +127,7 @@ textarea{
   position: relative;
   left: 20px;
   padding: 5px solid #fff;
+  font-size: 14px;
 }
 
 .post-button{
